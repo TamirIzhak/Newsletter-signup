@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const request = require ("request");
 
 const app = express();
+app.use(express.static(__dirname));
 
 app.listen(3000, function(){
     console.log("Server is up in port 3000");
