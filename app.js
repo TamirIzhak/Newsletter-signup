@@ -14,3 +14,12 @@ app.listen(3000, function(){
 app.get("/", function(req,res){
     res.sendFile(__dirname + "/signup.html");
 });
+
+app.post("/", function(req,res){
+
+    var firstName = req.body.firstName;
+    var lastName = req.body.lastName;
+    var email = req.body.email;
+
+    console.log(" "+firstName+" "+lastName+" "+email);
+});
