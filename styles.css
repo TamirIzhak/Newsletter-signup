@@ -55,6 +55,10 @@
         user-select: none;
     }
 
+    .logo {
+        border-radius: 1rem;
+        
+    }
     @media (min-width: 768px) {
         .bd-placeholder-img-lg {
             font-size: 3.5rem;
