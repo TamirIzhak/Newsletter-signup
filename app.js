@@ -9,8 +9,8 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.listen(3000, function() {
-    console.log("Server is up in port 3000");
+app.listen(process.env.PORT, function() {
+    console.log("Server is up");
 });
 
 app.get("/", function(req, res) {
@@ -38,7 +38,7 @@ app.post("/", function(req, res) {
         url: "https://us4.api.mailchimp.com/3.0/lists/7cd165f022",
         method: "POST",
         headers: {
-            "Authorization": "basic 503501a55f2c45061c349f7546ec37e3-us4"
+            "Authorization": "basic b867eb57b716f044de36d746cdc1cc46-us4"
         },
         body: [JSON.stringify(data)]
     };
@@ -59,5 +59,5 @@ app.post("/failure", function(req, send){
     res.redirect("/");
 
 });
-// 503501a55f2c45061c349f7546ec37e3-us4 // - mailchimp api
+
 // 7cd165f022 // -  Armadillomail list ID
